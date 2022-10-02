@@ -2,6 +2,7 @@ import 'package:cozy/models/space.dart';
 import 'package:cozy/theme.dart';
 import 'package:cozy/widgets/city_card.dart';
 import 'package:cozy/widgets/space_card.dart';
+import 'package:cozy/widgets/tips_card.dart';
 import 'package:flutter/material.dart';
 import 'package:cozy/models/city.dart';
 
@@ -68,20 +69,25 @@ class HomePage extends StatelessWidget {
                           imageUrl: 'assets/images/city2.png',
                           isPopular: true),
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(
+                      width: 20,
+                    ),
                     CityCard(
                       City(
                           id: 3,
                           name: 'Surabaya',
                           imageUrl: 'assets/images/city3.png'),
                     ),
-                    SizedBox(width: 24)
+                    SizedBox(
+                      width: 24,
+                    )
                   ],
                 ),
               ),
               SizedBox(
                 height: 30,
               ),
+              // NOTE : Recomended Spaces.
               Padding(
                 padding: EdgeInsets.only(left: edge),
                 child: Text(
@@ -92,7 +98,6 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              // NOTE : Recomended Spaces.
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: edge),
                 child: Column(
@@ -139,6 +144,32 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              // NOTE : Tips & guidance
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Tips & Guidance',
+                  style: regularTextStyle.copyWith(fontSize: 16),
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: edge),
+                child: Column(
+                  children: [
+                    TipsCard(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TipsCard(),
+                  ],
+                ),
+              )
             ],
           ),
         ),
