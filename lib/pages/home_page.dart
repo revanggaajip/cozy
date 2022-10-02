@@ -1,3 +1,4 @@
+import 'package:cozy/models/space.dart';
 import 'package:cozy/theme.dart';
 import 'package:cozy/widgets/city_card.dart';
 import 'package:cozy/widgets/space_card.dart';
@@ -92,18 +93,51 @@ class HomePage extends StatelessWidget {
                 height: 16,
               ),
               // NOTE : Recomended Spaces.
-              Column(
-                children: [
-                  SpaceCard(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(),
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: edge),
+                child: Column(
+                  children: [
+                    SpaceCard(
+                      Space(
+                        id: 1,
+                        name: 'Alun-alun',
+                        imageUrl: 'assets/images/space1.png',
+                        price: 52,
+                        city: 'Pekalongan',
+                        country: 'Indonesia',
+                        rating: 5,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 2,
+                        name: 'Gedung Garuda',
+                        imageUrl: 'assets/images/space2.png',
+                        price: 11,
+                        city: 'Batang',
+                        country: 'Indonesia',
+                        rating: 4,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 3,
+                        name: 'Konoha Village',
+                        imageUrl: 'assets/images/space3.png',
+                        price: 7,
+                        city: 'Konoha',
+                        country: 'Indonesia',
+                        rating: 3,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
