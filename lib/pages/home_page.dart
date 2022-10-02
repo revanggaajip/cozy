@@ -95,7 +95,13 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   SpaceCard(),
+                  SizedBox(
+                    height: 30,
+                  ),
                   SpaceCard(),
+                  SizedBox(
+                    height: 30,
+                  ),
                   SpaceCard(),
                 ],
               ),
