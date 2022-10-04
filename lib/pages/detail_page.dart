@@ -40,7 +40,35 @@ class DetailPage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            ListView(
+              children: [
+                SizedBox(
+                  height: 328,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  color: whiteColor,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
