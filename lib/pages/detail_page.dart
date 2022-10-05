@@ -1,4 +1,5 @@
 import 'package:cozy/theme.dart';
+import 'package:cozy/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -55,6 +56,7 @@ class DetailPage extends StatelessWidget {
                     color: whiteColor,
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 30,
@@ -132,7 +134,43 @@ class DetailPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      // NOTE : Main Facilities
+                      Padding(
+                        padding: EdgeInsets.only(left: edge),
+                        child: Text(
+                          'Main Facilities',
+                          style: regularTextStyle.copyWith(fontSize: 16),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            FacilityItem(
+                              name: 'kitchen',
+                              imageUrl: 'assets/images/icon_kitchen.png',
+                              total: 2,
+                            ),
+                            FacilityItem(
+                              name: 'bedroom',
+                              imageUrl: 'assets/images/icon_bedroom.png',
+                              total: 3,
+                            ),
+                            FacilityItem(
+                              name: 'Big Lemari',
+                              imageUrl: 'assets/images/icon_cupboard.png',
+                              total: 4,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 )
