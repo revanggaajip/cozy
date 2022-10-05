@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 2,
             ),
             Padding(
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                 style: greyTextStyle.copyWith(fontSize: 16),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             // NOTE : Popular Cities
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                 style: regularTextStyle.copyWith(fontSize: 16),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Container(
@@ -57,14 +57,14 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   CityCard(
                     City(
                         id: 1,
                         name: 'Jakarta',
                         imageUrl: 'assets/images/city1.png'),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   CityCard(
                     City(
                         id: 2,
@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
                         imageUrl: 'assets/images/city2.png',
                         isPopular: true),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   CityCard(
@@ -81,13 +81,13 @@ class HomePage extends StatelessWidget {
                         name: 'Surabaya',
                         imageUrl: 'assets/images/city3.png'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 24,
                   )
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             // NOTE : Recomended Spaces.
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
                 style: regularTextStyle.copyWith(fontSize: 16),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Padding(
@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                       rating: 5,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   SpaceCard(
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
                       rating: 4,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   SpaceCard(
@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             // NOTE : Tips & guidance
@@ -158,7 +158,7 @@ class HomePage extends StatelessWidget {
                 style: regularTextStyle.copyWith(fontSize: 16),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Padding(
@@ -173,7 +173,7 @@ class HomePage extends StatelessWidget {
                       updatedAt: '20 Apr',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TipsCard(
@@ -187,7 +187,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
           ],

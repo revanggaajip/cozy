@@ -43,25 +43,94 @@ class DetailPage extends StatelessWidget {
             ),
             ListView(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 328,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(
+                    borderRadius: const BorderRadius.vertical(
                       top: Radius.circular(20),
                     ),
+                    color: whiteColor,
                   ),
-                  color: whiteColor,
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: edge,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Kuretakeso Hott',
+                                  style: blackTextStyle.copyWith(
+                                    fontSize: 22,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 2,
+                                ),
+                                Text.rich(
+                                  TextSpan(
+                                    text: '\$30',
+                                    style:
+                                        purpleTextStyle.copyWith(fontSize: 16),
+                                    children: [
+                                      TextSpan(
+                                          text: ' / month',
+                                          style: greyTextStyle.copyWith(
+                                              fontSize: 16))
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/icon_star.png',
+                                  width: 20,
+                                ),
+                                const SizedBox(
+                                  width: 2,
+                                ),
+                                Image.asset(
+                                  'assets/images/icon_star.png',
+                                  width: 20,
+                                ),
+                                const SizedBox(
+                                  width: 2,
+                                ),
+                                Image.asset(
+                                  'assets/images/icon_star.png',
+                                  width: 20,
+                                ),
+                                const SizedBox(
+                                  width: 2,
+                                ),
+                                Image.asset(
+                                  'assets/images/icon_star.png',
+                                  width: 20,
+                                ),
+                                const SizedBox(
+                                  width: 2,
+                                ),
+                                Image.asset(
+                                  'assets/images/icon_star.png',
+                                  width: 20,
+                                  color: const Color(0xff989BA1),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       )
                     ],
