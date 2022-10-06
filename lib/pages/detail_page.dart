@@ -1,10 +1,20 @@
 import 'package:cozy/theme.dart';
 import 'package:cozy/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // final Uri _url = Uri.parse('https://flutter.dev');
+
+    Future<void> _launchUrl(String loc) async {
+      Uri _url = Uri.parse(loc);
+      if (!await launchUrl(_url)) {
+        throw 'Could not launch $_url';
+      }
+    }
+
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -226,9 +236,16 @@ class DetailPage extends StatelessWidget {
                               'Jln. Kappan Sukses No. 20\nPalembang',
                               style: greyTextStyle,
                             ),
-                            Image.asset(
-                              'assets/images/btn_map.png',
-                              width: 40,
+                            InkWell(
+                              onTap: () {
+                                _launchUrl(
+                                  'https://goo.gl/maps/ubyKFzKuCYVi2Pei6',
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/btn_map.png',
+                                width: 40,
+                              ),
                             )
                           ],
                         ),
