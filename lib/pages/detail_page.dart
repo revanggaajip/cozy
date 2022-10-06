@@ -9,7 +9,7 @@ class DetailPage extends StatelessWidget {
     // final Uri _url = Uri.parse('https://flutter.dev');
 
     Future<void> _launchUrl(String loc) async {
-      Uri _url = Uri.parse(loc);
+      final Uri _url = Uri.parse(loc);
       if (!await launchUrl(_url)) {
         throw 'Could not launch $_url';
       }
@@ -260,7 +260,9 @@ class DetailPage extends StatelessWidget {
                         height: 50,
                         width: MediaQuery.of(context).size.width - (2 * edge),
                         child: RaisedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchUrl('tel:085956534410');
+                          },
                           color: purpleColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(17),
