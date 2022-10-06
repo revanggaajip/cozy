@@ -6,6 +6,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       body: SafeArea(
         bottom: false,
         child: Stack(
@@ -15,32 +16,6 @@ class DetailPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 350,
               fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 30,
-                horizontal: edge,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Image.asset(
-                      'assets/images/btn_back.png',
-                      width: 40,
-                      height: 40,
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/btn_wishlist.png',
-                    width: 40,
-                    height: 40,
-                  ),
-                ],
-              ),
             ),
             ListView(
               children: [
@@ -146,6 +121,9 @@ class DetailPage extends StatelessWidget {
                           style: regularTextStyle.copyWith(fontSize: 16),
                         ),
                       ),
+                      const SizedBox(
+                        height: 12,
+                      ),
                       Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: edge,
@@ -174,7 +152,7 @@ class DetailPage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      // NOTE : Main Facilities
+                      // NOTE : Photos
                       Padding(
                         padding: EdgeInsets.only(left: edge),
                         child: Text(
@@ -222,11 +200,95 @@ class DetailPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      // NOTE : Location
+                      Padding(
+                        padding: EdgeInsets.only(left: edge),
+                        child: Text(
+                          'Location',
+                          style: regularTextStyle.copyWith(fontSize: 16),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 6,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Jln. Kappan Sukses No. 20\nPalembang',
+                              style: greyTextStyle,
+                            ),
+                            Image.asset(
+                              'assets/images/btn_map.png',
+                              width: 40,
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width - (2 * edge),
+                        child: RaisedButton(
+                          onPressed: () {},
+                          color: purpleColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(17),
+                          ),
+                          child: Text(
+                            'Book Now',
+                            style: whiteTextStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
                     ],
                   ),
                 )
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 30,
+                horizontal: edge,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Image.asset(
+                      'assets/images/btn_back.png',
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+                  Image.asset(
+                    'assets/images/btn_wishlist.png',
+                    width: 40,
+                    height: 40,
+                  ),
+                ],
+              ),
             ),
           ],
         ),

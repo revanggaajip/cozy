@@ -18,6 +18,9 @@ class FacilityItem extends StatelessWidget {
           width: 32,
           height: 32,
         ),
+        SizedBox(
+          height: 8,
+        ),
         Text.rich(
           TextSpan(
             text: '${total}',
